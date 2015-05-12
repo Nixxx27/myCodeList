@@ -1,0 +1,9 @@
+<script>
+function myFunction()
+{
+window.print();
+}
+</script>
+
+
+<button onClick="myFunction()">Print this page</button>

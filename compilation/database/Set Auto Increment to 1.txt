@@ -1,0 +1,1 @@
+ALTER TABLE mannytable AUTO_INCREMENT = 1

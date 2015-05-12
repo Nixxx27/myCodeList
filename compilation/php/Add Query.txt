@@ -1,0 +1,32 @@
+<?php
+    require("dbc.php");
+        
+    if(isset($_POST['save'])) {   
+		
+	$hotyear= $_POST['hotyear'];
+        $hotmonth= $_POST['hotmonth'];
+        
+        $hotarea= $_POST['hotarea'];
+        $hotarea = mysql_real_escape_string($hotarea);
+        
+        $hotmenu= $_POST['hotmenu'];
+        $hotmenu = mysql_real_escape_string($hotmenu);
+        
+        $hottime= $_POST['hottime'];
+       		
+			            
+        //ADD QUERY
+        $AddQuery = "INSERT INTO hottable (hotyear,hotmonth,hotarea,hotmenu,hottime) VALUES ('$hotyear','$hotmonth','$hotarea','$hotmenu','$hottime')";
+        
+       echo "<script type=text/javascript>alert('Record Successfully Added!')</script>";  
+       mysql_query($AddQuery, $con);
+            
+    };
+	mysql_close($con);   	
+        
+        
+        if(isset($_POST['cancel'])){
+            header("location:home.php");  
+        }
+	
+?>	

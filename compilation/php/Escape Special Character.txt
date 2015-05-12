@@ -1,0 +1,2 @@
+ $strpcmonth = $_POST['strpcmonth'];
+ $strpcmonth = str_replace("'", " ", $strpcmonth);

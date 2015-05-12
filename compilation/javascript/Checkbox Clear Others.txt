@@ -1,0 +1,32 @@
+<html>
+<header></header>
+<body
+
+<input type="hidden" id="hiddenmonth" name="Month"></input>
+
+</body>
+
+</html>
+
+
+
+<script type="text/javascript"> 
+        function selectJan1(){
+            if (document.getElementById("jan1").click){
+            document.getElementById("hiddenmonth").value="January";
+            document.getElementById("feb1").checked=false;
+            document.getElementById("mar1").checked = false;
+            document.getElementById("apr1").checked = false;
+            document.getElementById("may1").checked = false;
+            document.getElementById("jun1").checked = false;
+            document.getElementById("jul1").checked = false;
+            document.getElementById("aug1").checked = false;
+            document.getElementById("sep1").checked = false;
+            document.getElementById("oct1").checked = false;
+            document.getElementById("nov1").checked = false;
+            document.getElementById("dec1").checked = false;
+            }
+
+        }
+
+    </script>

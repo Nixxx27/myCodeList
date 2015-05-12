@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="container">
+
+
+		<header class="row">
+			<div class="borders col-xs-6">
+				<h1>EXTRA SMALL COL 6</h1>	
+			</div><!-- col-xs-6 -->
+
+			<div class="borders col-xs-6">
+				<h1>EXTRA SMALL COL 6</h1>	
+			</div><!-- col-xs-6 -->
+
+		</header><!-- row -->
+
+
+		<div class="row">
+			<div class="borders col-sm-6">
+				<h1>SMALL COL 6</h1>	
+			</div><!-- col-sm-6 -->
+
+			<div class="borders col-sm-6">
+				<h1>SMALL COL 6</h1>	
+			</div><!-- col-sm-6 -->
+		</div><!-- row -->
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+</body>
+</html>

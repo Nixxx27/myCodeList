@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="css/custom.css">-->
+
+	<style>
+		.container {
+			text-align: center;
+		}
+
+		.borders {
+			border: 1px solid black;
+
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div class="container">
+
+
+		<div class="row">
+			<div class="borders col-xs-6">
+				<h1>EXTRA SMALL COL 6</h1>	
+			</div><!-- col-xs-6 -->
+
+			<div class="borders col-xs-6">
+				<h1>EXTRA SMALL COL 6</h1>	
+			</div><!-- col-xs-6 -->
+
+		</div><!-- row -->
+
+
+		<div class="row">
+			<div class="borders col-sm-6">
+				<h1>SMALL COL 6</h1>	
+			</div><!-- col-sm-6 -->
+
+			<div class="borders col-sm-6">
+				<h1>SMALL COL 6</h1>	
+			</div><!-- col-sm-6 -->
+		</div><!-- row -->
+
+
+		<div class="row">
+			<div class="borders col-md-4">
+				<h1>MEDIUM COL 4</h1>	
+			</div><!-- col-md-4 -->
+
+			<div class="borders col-md-4">
+				<h1>MEDIUM COL 4</h1>	
+			</div><!-- col-md-4 -->
+
+
+			<div class="borders col-md-4">
+				<img src="img/kobe.jpg" alt="">	
+			</div><!-- col-md-4-->
+		</div><!-- row -->
+
+
+
+		<div class="row">
+			<div class="borders col-lg-6 col-sm-3">
+				<h1>LARGE GRID 7</h1>	
+			</div><!-- col-xs-6 -->
+
+			<div class="borders col-lg-6 col-sm-9">
+				<h1>LARGE GRID 8</h1>	
+			</div><!-- col-xs-6 -->
+		</div><!-- row -->
+
+
+
+<div class="row">
+    <div class="col-sm-6 col-lg-3">
+        This is part of our grid.
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        This is part of our grid.
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        This is part of our grid.
+    </div>    
+    <div class="col-sm-6 col-lg-3">
+        This is part of our grid.
+    </div>    
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="borders  col-md-2 col-lg-3">
+        <div class="visible-lg text-success">Large Devices!</div>
+        <div class="visible-md text-warning">Medium Devices!</div>
+        <div class="visible-xs visible-sm text-danger">Extra Small and Small Devices</div>
+    </div>
+    <div class="borders  col-md-2 col-lg-3">
+        <div class="visible-lg text-success">Large Devices!</div>
+        <div class="visible-md text-warning">Medium Devices!</div>
+        <div class="visible-xs visible-sm text-danger">Extra Small and Small Devices</div>
+    </div>
+    <div class="borders  col-md-2 col-lg-3">
+        <div class="visible-lg text-success">Large Devices!</div>
+        <div class="visible-md text-warning">Medium Devices!</div>
+        <div class="visible-xs visible-sm text-danger">Extra Small and Small Devices</div>
+    </div>    
+    <div class="borders  col-md-6 col-lg-3">
+        <div class="visible-lg text-success">Large Devices!</div>
+        <div class="visible-md text-warning">Medium Devices!</div>
+        <div class="visible-xs visible-sm text-danger">Extra Small and Small Devices</div>
+
+        
+    </div>    
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="borders  col-sm-9 col-lg-6 text-danger">
+        I am the main content.
+    </div>
+    <div class="borders  col-sm-3 text-warning">
+        I am the main sidebar.
+    </div>
+    <div class="borders  col-lg-3 visible-lg text-success">
+        I am the secondary sidebar that only shows up on LARGE devices.
+</div>
+</div>
+
+	</div><!-- container -->
+
+	
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+</body>
+</html>

@@ -1,0 +1,2 @@
+<a onclick="javascript:alert('Phone Directory Page is Under Developement')"  href="na.php" >
+<div class="classphone"></div></a>

@@ -1,0 +1,62 @@
+require_once("phpmailer/class.phpmailer.php");
+                    $email=$strpcemail;
+                    $bcc ="ict@skygroup.com.ph";
+                    $feedback= 'Thanks for the worthless Email';
+                    $subject = "Completed: " . $strsubject;
+                    $message= $_POST['address'];
+        
+                    $message=<<<EMAIL
+To: $strpcuser
+              
+A solution to your Help Desk Ticket #$strpcrefnumber,
+ 
+Subject: $strsubject, has been completed. 
+        
+Before the ticket is closed,We would be very grateful if you could provide Feedback for the solution within the next 2 days.
+        
+If no response has been received after that delay, the ticket will be closed automatically.
+
+Thank you,
+
+Information And Communication Tech. Department
+SkyLogistics Philippines Inc. | SkyKitchen Philippines Inc.
+
+Tel no: 851-1049 local 8700-03
+Visit our website: www.skylogistics.com.ph     
+ 
+   
+< This is a system -generated message. >       
+        
+EMAIL;
+
+
+
+
+$mailer = new PHPMailer();
+$mailer->IsSMTP();
+$mailer->Host = 'ssl://smtp.gmail.com:465';
+$mailer->SMTPAuth = TRUE;
+$mailer->Username = 'skyadmin@skygroup.com.ph';  // Change this to your gmail adress
+$mailer->Password = 'fishb0ne100';  // Change this to your gmail password
+$mailer->From = 'ict@skygroup.com.ph';  // This HAVE TO be your gmail adress
+$mailer->FromName = "SkyGroup ICT Help Desk"; // This is the from name in the email, you can put anything you like here
+$mailer->Subject = $subject;
+$mailer->Body = $message;
+$mailer->AddAddress($email);
+$mailer->AddBCC($bcc);
+$mailer->AddCC($strpccc1);
+$mailer->AddCC($strpccc2);
+$mailer->AddAttachment($target);
+
+
+if(!$mailer->Send())
+{
+   echo "<script>alert('Email Sending failed!, Please check Email Address or your Connection.')</script>";
+
+}
+else
+{
+echo "<script>alert('Email Successfully Sent to User.')</script>";
+
+
+}

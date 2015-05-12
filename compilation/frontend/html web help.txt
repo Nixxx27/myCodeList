@@ -1,0 +1,3 @@
+FAVICON:    http://favicon-generator.org/
+Website Boy: http://thewebsiteboy.com/snippets/
+Menu:		http://cssmenumaker.com/

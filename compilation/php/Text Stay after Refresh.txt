@@ -1,0 +1,1 @@
+value = "<?php echo isset($_POST['myday'])?$_POST['myday']:"" ?>"

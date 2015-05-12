@@ -1,0 +1,12 @@
+<?php
+        
+        // DIALOG BOX
+        require("dbc.php");
+        $itfullname = $_SESSION['fullname'];
+        $pendingstatus = "Pending";
+        $queryperit = "SELECT strpcstatus,strpcit,COUNT(*) as totalit FROM pcissue WHERE strpcit like '%".$itfullname."%' and strpcstatus like '%".$pendingstatus."%' GROUP BY strpcit DESC";
+       // $queryperit = "SELECT strpcit,strpcstatus,COUNT(*) as totalit FROM pcissue WHERE strpcit like '%".$itfullname."%' GROUP BY strpcit ";
+        $resultit = mysql_query($queryperit); 
+        $valuesit = mysql_fetch_assoc($resultit); 
+
+?>

@@ -1,0 +1,6 @@
+   if($_FILES["uploaded"]["error"] == 4) {
+          echo $strpicture=   $_POST['x_image'];
+                }else{
+
+                        $strpicture = $strpicture . basename( $_FILES['uploaded']['name']);
+                }

@@ -1,0 +1,49 @@
+<?php 
+    $num_menu = "0 hrs.";
+    
+    if (isset($_POST['compute'])){
+        require('dbc.php');
+        
+        $hotyear= $_POST['hotyear'];
+        $hotmonth= $_POST['hotmonth'];
+        $hotarea= $_POST['hotarea'];
+        $hotmenu= $_POST['hotmenu'];
+        $hottime= $_POST['hottime'];
+        
+        //SUM Total time
+        $querymenu = "SELECT sum(hottime) as total FROM  `hottable` WHERE  `hotyear` LIKE  '$hotyear' AND  `hotmonth` LIKE  '$hotmonth'";
+        $resultmenu  = mysql_query($querymenu); 
+        $valuesmenu  = mysql_fetch_assoc($resultmenu ); 
+        $num_menu = $valuesmenu['total']."hrs."; 
+
+        echo $num_menu;
+                        
+    }
+    
+?>
+
+
+
+
+
+ if (isset($_POST['set']))
+        {
+            require("dbc.php");
+                            //Count No Of Records
+                            $query = "SELECT COUNT(*) AS total FROM `pcissue";
+                            $result = mysql_query($query); 
+                            $values = mysql_fetch_assoc($result); 
+                            $num_total = $values['total']; 	
+                            $ex = "<span style='font-family:arial;font-size:14px;font-weight:bold'>" . "Total Rendered Service :"  . " " . $num_total . "</span>";
+                        
+                            //MONTHLY PER YEAR
+                            $queryyear =$_POST['pickyear'];
+                            $query = "SELECT strpcmonth,strpcstatus,COUNT(*) as total FROM pcissue WHERE stryear like '%".$queryyear."%' GROUP BY strpcmonth ";
+                            $result = mysql_query($query); 
+                            
+                            // ALL STATUS RECORD
+                            $query1 = "SELECT strpcstatus,COUNT(*) as total FROM pcissue GROUP BY strpcstatus DESC";
+                            $result1 = mysql_query($query1); 
+
+        }
+        ?>

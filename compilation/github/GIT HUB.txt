@@ -1,0 +1,90 @@
+git status
+git add index.html
+git status
+git commit -m "added index.html"
+git status
+git push
+
+
+git remote add origin https:// (the https clone url)
+Note: GitHub for Windows users should use the command git remote set-url origin instead of git remote add origin here.
+git push origin master
+
+
+// add folder (existing project) to github
+git init
+git add -A
+git commit -m "add all files"
+
+git remote add origin https:// (the https clone url)
+Note: GitHub for Windows users should use the command git remote set-url origin instead of git remote add origin here.
+git push origin master
+
+
+//different ways to add
+
+$ git add <list of files> == add the list of files
+$ git add --all = add all files
+$ git add *.txt   = add all txt files in current directory
+$ git add docs/*.txt = add all txt files in docs directory
+$ git add docs/ = add all files in docs directory
+$ git add "*.txt" = add all txt files in the whole project
+
+//check the diff
+
+$ git diff = check the different version
+
+// blow away all the changes since last commit
+$git checkout -- LICENSE.TXT (undo in windows)
+
+//unstage
+git reset head license.txt
+
+
+//short cut
+$ git commit -a -m "Modify readme"  (-a add -c commit)  = ADD CHANGES FROM ALL TRACKED FILES
+
+
+//RESET STAGING ONE DOWN
+$git reset --soft HEAD^  = undo last commit, put changes into staging (one step backward)
+
+
+//ANOTHER WAY TO EDIT COMMIT
+
+$ git commit --amend - m "modify readme " = change teh last commit
+
+
+=====
+
+$ git reset --hard HEAD^ = undo last commit and all changes
+$ git reset --hard HEAD^^ =undo last 2 commits and all changes
+
+
+
+===========================PUSH REMOTE REPOSITORY===
+
+git remote command
+create repository in GITHUB
+
+// adding a remote
+$ git remote add origin https://github.com/Nixxx27/myCodeList.git (add means new remote / origin means our name for this remote)
+$ git remote -v = show remote repositories
+$ git push -u origin master (origin = remote repository name / master = local branch to push)
+input user name
+input password
+(password caching = https://help.github.com/articles/set-up-git)
+
+
+$git pull (pull down download)
+
+
+
+====WORKING WITH REMOTES ===
+
+to add new remotes
+$ git remote add <name> <address>
+to remove remotes
+$ git remote rm <name>
+to push to remotes
+$ git push -u <name> <branch (usually master)>  (-u means it makes that next time you dont need to specify the name of the branch)
+

@@ -1,0 +1,16 @@
+//ATTACH 1
+            $strattach1 = "attachment/";
+                $strattach1 = $strattach1 . basename( $_FILES['uploaded1']['name']); 
+                    if(move_uploaded_file($_FILES['uploaded1']['tmp_name'], $strattach1)) 
+                        {
+                            // echo "The file ".  basename( $_FILES['uploaded']['name']). 
+                            " has been uploaded";
+                        } 
+
+
+
+
+ <input type="file" name="uploaded1" />
+
+
+//must have an access in upload diriectory

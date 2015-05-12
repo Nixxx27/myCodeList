@@ -1,0 +1,4 @@
+$Refnumber= "SELECT ID FROM pcissue ORDER BY ID DESC LIMIT 1";
+            $Refquery = mysql_query($Refnumber, $con);
+            $arr = mysql_fetch_array($Refquery);
+            $lastidnumber= $arr['ID'];

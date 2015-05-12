@@ -1,0 +1,24 @@
+<?php
+
+if(!isset($day) || trim($day) == ''){	//If Empty
+
+//echo 'Empty';
+
+} else { //If Not Empty
+if(!isset($day) || trim($day) == 'Saturday')
+	//Variables Search by This
+	$searchby = 'sat'; //search by Saturday in DB
+	$wherethis =  "Yes"; // search Saturday by user
+	$searchmonthby = 'month'; // search by Saturday in DB
+	$monththis = $_POST['monthz']; // search Saturday by user
+	
+};  // End Semicolon for isset if not Empty Saturday
+
+
+$querymenu = "SELECT sum(grandtotalmenu) as totalmenu FROM  `skylogistics` WHERE  `$searchby` LIKE  '$wherethis' AND  `$searchmonthby` LIKE  '$monththis' LIMIT 0 , 30";
+$resultmenu  = mysql_query($querymenu); 
+$valuesmenu  = mysql_fetch_assoc($resultmenu ); 
+$num_menu = $valuesmenu['totalmenu']; 
+
+
+?>

@@ -1,0 +1,3 @@
+JQuery User Interface:  http://jqueryui.com/dialog/
+
+DEVELOP PHP: developphp.com/view.php?tid=1056

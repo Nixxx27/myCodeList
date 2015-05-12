@@ -1,0 +1,7 @@
+  if (empty($_POST['uploaded1']))
+            {
+                $uploaded1 = "systempics/na.png";
+            }   else
+            {
+                $uploaded1 = $_POST['uploaded1'];
+            }

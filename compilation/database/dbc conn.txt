@@ -1,0 +1,7 @@
+<?php
+$con = mysql_connect("localhost","root","nikkoz06");
+    if (!$con){
+    die("Can not connect: " . mysql_error());
+    }
+    mysql_select_db("ictservtraq",$con);
+?>

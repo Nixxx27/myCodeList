@@ -1,0 +1,25 @@
+<?php
+session_start();
+
+$useraccess = $_SESSION['userglobalaccess'] ;
+//echo $useraccess ;
+		
+if ($useraccess=='administrator')
+    {
+       $_SESSION['itincharge']="";
+    }
+    
+if ($useraccess=='user')
+    {
+        $_SESSION['itincharge'] ="disabled";
+    }    
+
+    
+if (isset($_SESSION['Submit']) && $_SESSION['Submit'] == true) {
+
+} else {
+   	header("location:pleaselogin.php");
+}
+
+
+?>

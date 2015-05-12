@@ -1,0 +1,13 @@
+<?php
+
+	$month = (int)date("m");
+       	$day = (int)date("d");
+       	$strdatenow =  $month. "-" . $day. "-" . date("Y");
+
+?>      
+
+
+        
+date_default_timezone_set('Asia/Manila');
+	$strtime=date('h:i A');
+	$strdate=date("m/d/Y");
