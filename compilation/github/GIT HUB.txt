@@ -1,3 +1,13 @@
+BASIC CONFIG
+git config --global user.name "Nikko Zabala"
+git config --global user.email "nikko.zabala@gmail.com"
+
+git config --list = know your config
+
+
+//ALIASES
+$git config --global alias.st status = git sts <-> gi status
+
 git status
 git add index.html
 git status
@@ -34,10 +44,10 @@ $ git add "*.txt" = add all txt files in the whole project
 
 $ git diff = check the different version
 
-// blow away all the changes since last commit
+// BLOW AWAY ALL CHANGES SINCE LAST COMMIT
 $git checkout -- LICENSE.TXT (undo in windows)
 
-//unstage
+//UNSTAGE
 git reset head license.txt
 
 
@@ -45,13 +55,13 @@ git reset head license.txt
 $ git commit -a -m "Modify readme"  (-a add -c commit)  = ADD CHANGES FROM ALL TRACKED FILES
 
 
-//RESET STAGING ONE DOWN
+//RESET STAGING ONE DOWN (undo the last commit)
 $git reset --soft HEAD^  = undo last commit, put changes into staging (one step backward)
 
 
-//ANOTHER WAY TO EDIT COMMIT
+//ANOTHER WAY TO EDIT COMMIT (change the last commit)
 
-$ git commit --amend - m "modify readme " = change teh last commit
+$ git commit --amend - m "modify readme " = change the last commit and the message.(only the last commit)
 
 
 =====
@@ -62,7 +72,7 @@ $ git reset --hard HEAD^^ =undo last 2 commits and all changes
 
 
 ===========================PUSH REMOTE REPOSITORY===
-
+(add project to github)
 git remote command
 create repository in GITHUB
 
@@ -87,4 +97,120 @@ to remove remotes
 $ git remote rm <name>
 to push to remotes
 $ git push -u <name> <branch (usually master)>  (-u means it makes that next time you dont need to specify the name of the branch)
+
+
+
+==PULL (Clone the repository)==
+
+$ git clone https://github.com/Nixxx27/myCodeList.git
+// change name of the downloaded repository
+$ git clone https://github.com/Nixxx27/myCodeList.git git-demo (git-demo is the new name in local folder)
+
+
+===CREATING BRANCH==
+$ git branch cat = create cat branch
+$ git branch = to check your branch
+$ git checkout cat = switch to cat branch
+
+$ git merge cat (need to be in master will merge cat)
+
+//DELETE BRANCH
+$ git branch -d cat = delete branch cat
+
+
+//SHORTCUT TO CREATE  BRANCH AND CHECKOUT
+$ git checkout -b admin = create admin branch and switch
+
+
+==== FETCH===
+
+$ git fetch
+$ git merge origin/master
+
+
+==REMOTE BRANCHES AND TAGS (create and add to gitHub)==
+$ git checkout -b skpi (create skpi branch and switch)
+$ git push origin skpi (push branch skpi to gitHub)
+
+// PULLING NEW BRANCHES
+$ git branch -r = list all remote branches
+$ git checkout skpi (now he can see skpi branch to local)
+$ git remote show origin (show all remote branches /if they are tracked or not/and local branches if updated or not)
+$ git push origin :skpi (remove remote branch) colon:branch
+$ git branch -d skpi = delete local branch manually
+$ git branch -D skpi = confirm deletion after prompt.
+//if someone delete the branch and you still have a local copy
+$git remote prune origin = to clean up delete remote branches
+
+
+
+//TAGGING
+sometime use as version
+$ git tag = list all tags
+$ git check out v0.0.1 = to go back to a tag and check what code looks like
+$ git tag -a v0.0.3 -m "version 0.0.3" = -a add new tag -m tag description
+$ git push --tags = to push tags to our remote server
+
+
+
+//REBASE
+git fetch //take changes from remote
+git rebase //  move our local to temp area
+ /* scenario */
+master and admin branch. checkout admin first then rebase. then checkout master then merge
+git rebase --continue = continue afte cleaning conflict
+git rebase --skip =skip the error
+git rebase  --abort = pretend we didnt rebase
+
+
+// LOG
+
+COLORIZING THE LOG
+git config --global color.ui true
+git log
+
+format LOG==
+git log --pretty=online //meaning:oneline with shad at the begining
+git log --pretty=format:"%h %ad- %s [%an]"
+//PATCH
+git log --online -p (show what each commit change in the log) show you what lines remove or added
+git log --online --stat (shows how many insertion or deletion made )
+git log --online --grash (visual representation)
+//'DATE RANGE
+git log --until=1.minute.ago
+$ git log --since=1.day.ago
+$ git log --since=1.hour.ago
+$ git log --since=1.month.ago --until=2.weeks.ago (since & until relative)
+$ git log --since=2000-01-01 --until=2012-12-21
+//DIFF
+git diff
+git diff head
+git diff HEAD^ =parent of latest commit
+git diff HEAD^^ =grandparent of latest commit
+git diff HEAD~5 =five commits ago
+git diff HEAD^..HEAD = second most recent commit vs most recent
+git diff 4fb063f..f5a6ff9 =diiff between sha
+git diff master bird = COMPARE TWO BRANCHES
+$ git diff --since=1.day.ago = SAME as git log timeline
+
+//BLAME = to see the change on each line, who made them, when and which commit
+
+//EXCLUDING FILES
+.git/info/exclude
+ just add the folder inside the .git/info/exclude
+
+//REMOVE FILE FROM REPOSITORY
+git rm README.txt = remove readme.txt
+git status
+git commit -m "delete readme"
+git push
+
+$git rm --cached deelopment.log =stop tracking the logs
+git status
+========
+git add .gitignore
+git commit -m "Ignore all log files."
+
+
+
 
