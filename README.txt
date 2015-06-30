@@ -1,3 +1,3 @@
-Modify only if code is deprecated.
+Modify only if code is deprecate.
 
 -nikkoZabala
